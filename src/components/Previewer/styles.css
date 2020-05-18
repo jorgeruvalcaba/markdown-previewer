@@ -1,6 +1,6 @@
 .Previewer {
   min-height: 75vh;
-  min-width: 85vw;
+  max-width: 85vw;
   background-color: #1f4068;
   display: flex;
   justify-content: space-evenly;
@@ -19,10 +19,17 @@ textarea {
 
 .Viewer {
   border: 1px solid white;
+  padding-left: 1em;
+  padding-right: 1em;
   width: 45%;
+  text-align: justify;
 }
 
 #preview {
   width: 100%;
   height: 100%;
+}
+
+img {
+  width: 100%;
 }

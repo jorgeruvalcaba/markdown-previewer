@@ -8,7 +8,7 @@ import './styles.css';
 const App: React.FunctionComponent<{}> = () => {
   return (
     <div className="App">
-      <h1>Markdown viewer</h1>
+      <h1>Markdown Previewer</h1>
       <Previewer />
       <Footer />
     </div>

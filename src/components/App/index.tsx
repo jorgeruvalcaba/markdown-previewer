@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import Footer from '../Footer';
-import Previewer from '../Previewer';
+import Footer from '../Footer'
+import Previewer from '../Previewer'
 
-import './styles.css';
+import './styles.css'
 
 const App: React.FunctionComponent<{}> = () => {
   return (
@@ -12,7 +12,7 @@ const App: React.FunctionComponent<{}> = () => {
       <Previewer />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

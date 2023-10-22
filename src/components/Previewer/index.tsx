@@ -1,7 +1,7 @@
-import React, { useState, FunctionComponent } from 'react';
-import marked from 'marked';
+import React, { useState, FunctionComponent } from 'react'
+import marked from 'marked'
 
-import './styles.css';
+import './styles.css'
 
 const DEFAULT_TEXT = `
 # Marked - Markdown Parser
@@ -52,23 +52,23 @@ Ready to start writing?  Either start changing stuff on the left or
 
 [Marked]: https://github.com/markedjs/marked/
 [Markdown]: http://daringfireball.net/projects/markdown/
-`;
+`
 
 interface FormattedText {
-  __html: string;
+  __html: string
 }
 
-const Previewer: FunctionComponent<{}> = () => {
-  const [editorContent, setEditorContent] = useState(DEFAULT_TEXT);
+const Previewer: FunctionComponent = () => {
+  const [editorContent, setEditorContent] = useState(DEFAULT_TEXT)
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>): void => {
-    setEditorContent(event.target.value);
-  };
+    setEditorContent(event.target.value)
+  }
 
   const getFormattedText = (): FormattedText => {
-    const rawMarkup = marked(editorContent, { sanitize: true, breaks: true });
-    return { __html: rawMarkup };
-  };
+    const rawMarkup = marked(editorContent, { sanitize: true, breaks: true })
+    return { __html: rawMarkup }
+  }
 
   return (
     <div className="Previewer">
@@ -79,7 +79,7 @@ const Previewer: FunctionComponent<{}> = () => {
         <div id="preview" dangerouslySetInnerHTML={getFormattedText()} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Previewer;
+export default Previewer

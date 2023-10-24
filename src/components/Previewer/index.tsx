@@ -1,5 +1,5 @@
 import React, { useState, FunctionComponent } from 'react'
-import marked from 'marked'
+import { marked } from 'marked'
 
 import './styles.css'
 
@@ -66,7 +66,7 @@ const Previewer: FunctionComponent = () => {
   }
 
   const getFormattedText = (): FormattedText => {
-    const rawMarkup = marked(editorContent, { sanitize: true, breaks: true })
+    const rawMarkup = marked.parse(editorContent)
     return { __html: rawMarkup }
   }
 
